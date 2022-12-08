@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,700;1,100;1,300;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,900&display=swap');
 .container {
+    font-family: 'Barlow Condensed', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +11,7 @@
         background-color: rgba(255, 255, 255, 0.836);
         padding: 10px 50px;
         border-radius: 10px;
-        box-shadow:6px  6px  rgb(230, 227, 207) , 12px  12px rgb(194, 191, 174);
+        box-shadow: 3px  3px  gray;
         
         .app-title {
             text-align: center;
@@ -26,12 +28,59 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-
+            
             input {
                 padding: 6px;
                 border: none;
                 border-radius: 6px;
             }
+
+            ::placeholder {
+                color: rgb(76, 97, 163);
+            }
+            .sign-up {                
+                margin-left: auto;
+                margin-right: auto;
+                width: 55%;
+                padding: 5px;
+                cursor: pointer;
+                background-color: rgb(76, 97, 163);
+                color: white;
+                border: none;
+                border-radius: 6px;
+                transition: 0.3s;
+               
+            }
+            .avatar-label {
+                display: flex;
+                font-size: 14px;
+                color: rgb(76, 97, 163);
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                img {
+                    width: 40px;
+                }
+                :hover {
+                    color: rgb(255, 255, 255);
+                }
+            }
+            .sign-up:hover {
+                color: rgb(76, 97, 163);
+                background-color: white;
+                box-shadow: 5px 5px gray;
+            }
+            .sign-up:active {
+                box-shadow: 2px 2px black;
+                
+            }
+        }
+
+        .registration_question {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 35px;
         }
     }
 }

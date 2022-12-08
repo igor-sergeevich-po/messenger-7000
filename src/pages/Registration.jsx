@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import avatar from '../assets/img/user-avatars-icon.png'
 
 export const Registration = () => {
   return (
@@ -12,10 +12,14 @@ export const Registration = () => {
                     <input type="text" placeholder='user name' />
                     <input type="email" placeholder='email' />
                     <input type="password" placeholder='password' />
-                    <input type="file" />
-                    <button>Sign up</button>
+                    <label className='avatar-label'>
+                    <input style={{display: 'none'}} type="file" />
+                    <img src={avatar} alt='click and set your avatar' />
+                    <span>set avatar</span>
+                    </label>
+                    <button className='sign-up'>Sign up</button>
                 </form>
-                <p>Do you have an account? <a href='#'>Login</a> </p>
+                <p className='registration_question'>Do you have an account? <a href='#'>Login</a> </p>
             </div>
         </div>
     </React.Fragment>
