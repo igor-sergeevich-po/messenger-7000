@@ -15,8 +15,8 @@ export const Registration = () => {
                     <label className='avatar-label'>
                     <input style={{display: 'none'}} type="file" />
                     <img src={avatar} alt='click and set your avatar' />
-                    <span>set avatar</span>
-                    </label>
+                      <span>set avatar</span>
+                      </label>
                     <button className='sign-up'>Sign up</button>
                 </form>
                 <p className='registration_question'>Do you have an account? <a href='#'>Login</a> </p>
