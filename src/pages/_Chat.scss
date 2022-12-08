@@ -1,0 +1,32 @@
+.chat {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    background: rgb(163, 208, 216);
+    height: 100%;
+    .chatInfo {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(217, 231, 243);
+        display: flex;
+        flex-direction: row;
+        padding: 15px;
+        img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+    }
+    .messages {
+        flex: 24;
+
+        background-color: rgba(127, 148, 255, 0.662);
+    }
+    .inputChat {
+        flex: 1;
+
+        background-color: white;
+    }
+}
