@@ -1,0 +1,75 @@
+.home {
+    display: flex;
+    background-color: rgb(246, 248, 246);
+    height: 90vh;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 3px 3px gray;
+    overflow: hidden;
+    
+    .sidebar {
+        flex: 1;
+        background-color: rgb(217, 231, 243);
+        height: 100%;
+        .navbar {
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            font-size: 16px;
+            padding: 12px;
+            color:white;
+            background-color: rgba(127, 148, 255, 0.662);
+            font-style: italic;
+
+            .navbar_logo-title {
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .navbar_user {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                
+                .navbar_user-avatar {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 40px;
+                    background-color: bisque;
+                }
+                .navbar_logout {
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-size: 12px;
+                    width: 55%;
+                    padding: 5px;
+                    cursor: pointer;
+                    background-color: rgb(76, 97, 163);
+                    color: white;
+                    border: none;
+                    border-radius: 6px;
+                    transition: 0.3s;
+                }
+                .navbar_logout:hover {
+                    color: rgb(76, 97, 163);
+                    background-color: white;
+                    box-shadow: 5px 5px gray;
+                }
+                .navbar_logout:active {
+                    box-shadow: 2px 2px black;
+                    
+                }
+            }
+
+        }
+    }
+    .chat {
+        flex: 2;
+        height: 100%;
+        background-color: rgb(41 39 36);
+        color: white;
+    }
+}
