@@ -72,6 +72,7 @@
             flex-direction: column;
             align-items: flex-start;
             transition: .3s;
+            border-bottom: 2px solid rgb(76, 97, 163);
             input {
                 border-radius: 10px;
                 width: 100%;
@@ -81,12 +82,14 @@
                 cursor: pointer;
                 padding: 5px;
                 border: none;
-                border-bottom: 1px solid gray;
+                
                 outline: none;
                 transition: .3s;
                 &:hover {
-                    border-bottom: 1px solid rgb(255, 255, 255);
                     background-color: rgba(127, 148, 255, 0.228);
+                }
+                &:active {
+                    background-color: rgba(0, 128, 0, 0.315);
                 }
                 &::placeholder {
                     color: gray;
@@ -106,15 +109,15 @@
                 transition: .3s;
                 cursor: pointer;
 
-                
-
                     &:hover {
-                border-radius: 10px;
-
+                        border-radius: 10px;
                         color: green;
                         background-color: rgba(127, 148, 255, 0.228);
                     }
-                
+                    &:active {
+                        background-color: rgba(0, 128, 0, 0.315);
+                        color: white;
+                    }
                 .search_avatar {
                     border-radius: 50px;
                     width: 35px;
@@ -124,11 +127,56 @@
             }
 
         }
+
+        .chats {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 5px;
+            .user {
+                
+                gap: 10px;
+                display: flex;
+                cursor: pointer;
+                transition: .3s;
+                padding: 5px 15px;
+                &:hover {
+                    border-radius: 10px;
+                    color: green;
+                    background-color: rgba(127, 148, 255, 0.228);
+                }
+                &:active {
+                    background-color: rgba(0, 128, 0, 0.315);
+                    color: white;
+                }
+                .user-chat-avatar {
+                    width: 40px;
+                    border-radius: 50%;
+                }
+                .userChat-info {
+                    gap:0px;
+                    font-style: italic;
+                    .user-chat-name {
+                       
+                    }
+                    .last-mess {
+                        padding: 0;
+                        margin: 0;
+                        color: rgb(158, 146, 146);
+                        
+
+
+                    }
+                }
+            }
+        }
     }
     .chat {
         flex: 2;
         height: 100%;
         background-color: rgb(41 39 36);
         color: white;
+
+        
     }
 }
