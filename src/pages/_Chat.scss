@@ -24,9 +24,34 @@
     .messages {
         height: 80%;
         background-color: $userChatBgLight;
+        overflow: scroll;
 
-        .mes-item {
+        .message {
             padding: 5px 15px;
+            
+            .message-info {
+                gap: 15px;
+                display: flex;
+                flex-direction: row;
+                .message-title {
+                    display: flex;
+                    flex-direction: column;
+                    img {
+                        width: 40px;
+                    }
+                    span {
+                        color: gray;
+                        font-size: 12px;
+                    }
+                }
+                .message-text {
+                    p {
+                        background-color: rgb(236 236 236);
+                        padding: 5px 10px;
+                        border-radius: 0 10px 10px 10px;
+                    }
+                }
+            }
         }
     }
     .inputChat {
@@ -38,7 +63,8 @@
         input {
             border: none;
             width: 88%;
-
+            padding: 5px;
+            outline: none;
             &::placeholder {
                 text-align: center;
                 
