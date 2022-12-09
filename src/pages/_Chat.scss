@@ -1,15 +1,17 @@
+@import '../pages/Variables';
 .chat {
     flex: 2;
     display: flex;
     flex-direction: column;
-    background: rgb(163, 208, 216);
+    background: $userChatBgLight;
     height: 100%;
     .chatInfo {
-        flex: 1;
+        height: 10%;
         display: flex;
+        color: $headerTitleLight;
         justify-content: space-between;
         align-items: center;
-        background-color: rgb(217, 231, 243);
+        background-color: $headerChatbarLight;
         display: flex;
         flex-direction: row;
         padding: 15px;
@@ -20,13 +22,49 @@
         }
     }
     .messages {
-        flex: 24;
+        height: 80%;
+        background-color: $userChatBgLight;
 
-        background-color: rgba(127, 148, 255, 0.662);
+        .mes-item {
+            padding: 5px 15px;
+        }
     }
     .inputChat {
-        flex: 1;
+        height: 10%;
+        background-color: $inputChatLight;
+        display: flex;
+        justify-content: flex-end;
+        align-items: r;
+        input {
+            border: none;
+            width: 88%;
 
-        background-color: white;
+            &::placeholder {
+                text-align: center;
+                
+            }
+        }
+        .send-button {
+            border: none;
+            border-radius: 10px;
+            
+            width: 12%;
+            padding: 5px;
+            margin: 7px;
+            color: #ffffff;
+            background-color: #4c61a3;
+            cursor: pointer;
+            transition: .3s;
+            
+            &:hover {
+               background-color: rgb(30, 165, 210);
+               color:white;
+               box-shadow: 5px 5px gray;
+            }
+            &:active {
+                background-color: rgb(58, 186, 143);
+                box-shadow: 2px 2px black;
+            }
+        }
     }
 }

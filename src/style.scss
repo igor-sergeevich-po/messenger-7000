@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,700;1,100;1,300;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,400;1,900&display=swap');
 @import './pages/_Home';
 @import './pages/_Chat';
+@import './pages/Variables';
 
 * {
     box-sizing: border-box;
@@ -10,14 +11,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(76, 97, 163);
+    background-color: $bgColorLight;
     height: 100vh;
 
     .wrapper {
-        background-color: rgba(255, 255, 255, 0.836);
+        background-color: $bgColorAppLight;
         padding: 10px 50px;
         border-radius: 10px;
         box-shadow: 3px  3px  gray;
+        
         
         .app-title {
             text-align: center;
@@ -57,19 +59,28 @@
                 transition: 0.3s;
                
             }
+            label:hover {
+                color: rgb(255, 255, 255);
+                background-color: rgba(127, 148, 255, 0.228)
+            }
+            label:active {
+                background-color: rgba(0, 128, 0, 0.315);
+                color: #4C61A3;
+            }
             .avatar-label {
+                padding: 5px;
+                transition: .3s;
                 display: flex;
                 font-size: 14px;
+                border-radius: 10px;
                 color: rgb(76, 97, 163);
-                gap: 10px;
+                gap: 15px;
                 justify-content: center;
                 align-items: center;
                 cursor: pointer;
                 img {
                     width: 40px;
-                }
-                :hover {
-                    color: rgb(255, 255, 255);
+                    border-radius: 50%;
                 }
             }
             .sign-up:hover {

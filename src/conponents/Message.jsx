@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Message = () => {
   return (
-    <div>Message 1</div>
+    <div className='mes-item'>Message 1</div>
   )
 }

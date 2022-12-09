@@ -13,16 +13,17 @@
     
     .sidebar {
         flex: 1;
-        background-color: rgb(217, 231, 243);
+        background-color: $searchUserBgLight;
         height: 100%;
         .navbar {
             display: flex;
             justify-content:space-between;
+            height: 10%;
             align-items: center;
             font-size: 16px;
             padding: 12px;
             color:white;
-            background-color: rgba(127, 148, 255, 0.662);
+            background-color: $headerSidebarLight;
             font-style: italic;
 
             .navbar_logo-title {
@@ -36,8 +37,8 @@
                 gap: 10px;
                 
                 .navbar_user-avatar {
-                    height: 30px;
-                    width: 30px;
+                    height: 35px;
+                    width: 35px;
                     object-fit: cover;
                     border-radius: 40px;
                     background-color: bisque;
@@ -49,7 +50,7 @@
                     width: 55%;
                     padding: 5px;
                     cursor: pointer;
-                    background-color: rgb(76, 97, 163);
+                    background-color: rgb(128 143 191);
                     color: white;
                     border: none;
                     border-radius: 6px;
