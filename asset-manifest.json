@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.c359fcce.css",
-    "main.js": "/static/js/main.d2208641.js",
-    "static/media/Avatar-PNG-Image.png": "/static/media/Avatar-PNG-Image.d39e3481240e0233e74e.png",
-    "static/media/user-avatars-icon.png": "/static/media/user-avatars-icon.c4f34c054300a35a4801.png",
-    "index.html": "/index.html",
-    "main.c359fcce.css.map": "/static/css/main.c359fcce.css.map",
-    "main.d2208641.js.map": "/static/js/main.d2208641.js.map"
+    "main.css": "/messenger-7000/static/css/main.c359fcce.css",
+    "main.js": "/messenger-7000/static/js/main.bcaeac4e.js",
+    "static/media/Avatar-PNG-Image.png": "/messenger-7000/static/media/Avatar-PNG-Image.d39e3481240e0233e74e.png",
+    "static/media/user-avatars-icon.png": "/messenger-7000/static/media/user-avatars-icon.c4f34c054300a35a4801.png",
+    "index.html": "/messenger-7000/index.html",
+    "main.c359fcce.css.map": "/messenger-7000/static/css/main.c359fcce.css.map",
+    "main.bcaeac4e.js.map": "/messenger-7000/static/js/main.bcaeac4e.js.map"
   },
   "entrypoints": [
     "static/css/main.c359fcce.css",
-    "static/js/main.d2208641.js"
+    "static/js/main.bcaeac4e.js"
   ]
 }
