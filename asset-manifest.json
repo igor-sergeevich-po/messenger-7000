@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/igor-sergeevich-po/messenger-7000/static/css/main.c359fcce.css",
-    "main.js": "/igor-sergeevich-po/messenger-7000/static/js/main.4f3c20a2.js",
+    "main.js": "/igor-sergeevich-po/messenger-7000/static/js/main.4717de8d.js",
     "static/media/Avatar-PNG-Image.png": "/igor-sergeevich-po/messenger-7000/static/media/Avatar-PNG-Image.d39e3481240e0233e74e.png",
     "static/media/user-avatars-icon.png": "/igor-sergeevich-po/messenger-7000/static/media/user-avatars-icon.c4f34c054300a35a4801.png",
     "index.html": "/igor-sergeevich-po/messenger-7000/index.html",
     "main.c359fcce.css.map": "/igor-sergeevich-po/messenger-7000/static/css/main.c359fcce.css.map",
-    "main.4f3c20a2.js.map": "/igor-sergeevich-po/messenger-7000/static/js/main.4f3c20a2.js.map"
+    "main.4717de8d.js.map": "/igor-sergeevich-po/messenger-7000/static/js/main.4717de8d.js.map"
   },
   "entrypoints": [
     "static/css/main.c359fcce.css",
-    "static/js/main.4f3c20a2.js"
+    "static/js/main.4717de8d.js"
   ]
 }
