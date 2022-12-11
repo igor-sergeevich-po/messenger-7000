@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/igor-sergeevich-po/messenger-7000/static/css/main.c359fcce.css",
-    "main.js": "/igor-sergeevich-po/messenger-7000/static/js/main.30e6669b.js",
-    "static/media/Avatar-PNG-Image.png": "/igor-sergeevich-po/messenger-7000/static/media/Avatar-PNG-Image.d39e3481240e0233e74e.png",
-    "static/media/user-avatars-icon.png": "/igor-sergeevich-po/messenger-7000/static/media/user-avatars-icon.c4f34c054300a35a4801.png",
-    "index.html": "/igor-sergeevich-po/messenger-7000/index.html",
-    "main.c359fcce.css.map": "/igor-sergeevich-po/messenger-7000/static/css/main.c359fcce.css.map",
-    "main.30e6669b.js.map": "/igor-sergeevich-po/messenger-7000/static/js/main.30e6669b.js.map"
+    "main.css": "/static/css/main.c359fcce.css",
+    "main.js": "/static/js/main.d2208641.js",
+    "static/media/Avatar-PNG-Image.png": "/static/media/Avatar-PNG-Image.d39e3481240e0233e74e.png",
+    "static/media/user-avatars-icon.png": "/static/media/user-avatars-icon.c4f34c054300a35a4801.png",
+    "index.html": "/index.html",
+    "main.c359fcce.css.map": "/static/css/main.c359fcce.css.map",
+    "main.d2208641.js.map": "/static/js/main.d2208641.js.map"
   },
   "entrypoints": [
     "static/css/main.c359fcce.css",
-    "static/js/main.30e6669b.js"
+    "static/js/main.d2208641.js"
   ]
 }
