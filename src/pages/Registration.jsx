@@ -9,13 +9,13 @@ import { Link, useNavigate } from 'react-router-dom';
 
 
 export const Registration = () => {
-  const [error, setError] = useState(false);
-  const [errMessage, setErrMessage] = useState('')
+  // const [signupIsActive, setSignupIsActive] = useState(false)
+  
   const navigate = useNavigate();
 
-  // 
+  
   const deleteAcc = async () => {
-    await deleteDoc(doc(db, 'users', 'simple'))
+    await deleteDoc(doc(db, 'users', 'grigo'))
   }
  
   const createAccount = async (e) => {
@@ -26,6 +26,11 @@ export const Registration = () => {
     const email = e.target.email.value
     const file = e.target.avatarImg.value  
     
+    // if (displayName.length > 5) {
+    //   setSignupIsActive(true)
+    // } else {
+    //   setSignupIsActive(false)
+    // }
     // ссылка на аватарку
     const storageRef = ref(storage, file)
     const id = uuid()
@@ -50,7 +55,7 @@ export const Registration = () => {
   displayName,
   photoURL: file
 })
-          navigate('/')
+          navigate('/messenger-7000/home')
         })
       
         .catch((error) => {
@@ -129,19 +134,18 @@ export const Registration = () => {
                 <h2 className='app-title'>Messenger 7000</h2>
                 <span className='title'>Registration</span>
                 <form onSubmit={createAccount}>
-                    <input type="text" name='name' placeholder='user name' />
-                    <input type="email" name='email' placeholder='email' />
-                    <input type="password" name='password' placeholder='password' />
+                    <input type="text" name='name' placeholder='user name *' />
+                    <input type="email" name='email' placeholder='email *' />
+                    <input type="password" name='password' placeholder='password *' />
                     <label className='avatar-label'>
                     <input name='avatarImg' style={{display: 'none'}} type="file" />
                     <img src={avatar} alt='click and set your avatar' />
                       <span>set avatar</span>
                       </label>
                     <button className='sign-up'>Sign up</button>
-                    {error && <span style={{color: 'tomato'}}>{errMessage}</span>}
                 </form>
-                <button onClick={deleteAcc}>deleteAcc</button>
-                <p className='registration_question'>Do you have an account? <Link to='/login'>Login</Link> </p>
+                {/* <button disabled={ signupIsActive? false : true } onClick={deleteAcc}>deleteAcc</button> */}
+                <p className='registration_question'>Do you have an account? <Link className='link' to='/messenger-7000/login'>yes, I have</Link> </p>
             </div>
         </div>
     </React.Fragment>

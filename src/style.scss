@@ -98,6 +98,25 @@
             text-align: center;
             font-size: 12px;
             margin-top: 35px;
+            color:$hoverColorShadowBattonLight;
+            
+                .link {
+                    color: $titleAppLight;
+                    border-radius: 6px;
+                    transition: 0.3s;
+                    padding: 3px 10px 5px;
+                    text-decoration: none;
+                    &:hover {
+                        color: $hoverColorTextLight;
+                        cursor: pointer;
+                        background-color: $hoverColorBgElementLight;
+                        
+                    }
+                    &:active {
+                        background-color: $activeColorElementLight;
+                    }
+                }
+            
         }
     }
 }

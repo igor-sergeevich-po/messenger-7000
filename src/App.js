@@ -2,7 +2,7 @@
 import { Home } from './pages/Home';
 import { Login } from './pages/Login';
 import { Registration } from './pages/Registration';
-import { Test } from './pages/Test';
+
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -13,15 +13,12 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/'>
-          <Route index element={<Home />} />
-          <Route path='login' element={<Login />} />
-          <Route path='registration' element={<Registration />} />
-
+        <Route path='messenger-7000/'>
+          <Route index element={<Registration />} />
+          <Route path='/messenger-7000/login' element={<Login />} />
+          <Route path='/messenger-7000/home' element={<Home />} />
         </Route>
-
       </Routes>
-     
     </BrowserRouter>
   );
 }
