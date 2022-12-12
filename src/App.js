@@ -36,6 +36,7 @@ function App() {
               <Home />
             </ProtectedRoute>
             } />
+          <Route path='/messenger-7000/*' element={<Navigate to='/messenger-7000/' />} />
         </Route>
       </Routes>
     </BrowserRouter>
