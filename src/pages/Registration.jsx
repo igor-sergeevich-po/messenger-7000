@@ -9,13 +9,13 @@ import { Link, useNavigate } from 'react-router-dom';
 
 
 export const Registration = () => {
-  // const [signupIsActive, setSignupIsActive] = useState(false)
-  
+  const [signupIsActive, setSignupIsActive] = useState(!false)
+  const [errText, setErrText] = useState(null)
   const navigate = useNavigate();
 
   
   const deleteAcc = async () => {
-    await deleteDoc(doc(db, 'users', 'grigo'))
+    await deleteDoc(doc(db, 'users', 'grigoo12'))
   }
  
   const createAccount = async (e) => {
@@ -59,9 +59,12 @@ export const Registration = () => {
         })
       
         .catch((error) => {
+          console.log('catch')
             const errorCode = error.code;
             const errorMessage = error.message;
+            setErrText(error)
             // ..
+            alert(errText.message)
         });
     
     uploadBytes(storageRef, displayName).then((snapshot) => {

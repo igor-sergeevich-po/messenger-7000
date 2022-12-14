@@ -18,7 +18,7 @@ function App() {
 
   const ProtectedRoute = ({children}) => {
     if (!currentUser) {
-      alert('для начала зарегистрируйся')
+      alert('Приветствую вас Сэр/Мэм, для начала зарегистрируйтесь пожалуйста ;J')
       return <Navigate to='/messenger-7000/' />
     } else {
       return children
@@ -37,6 +37,7 @@ function App() {
             </ProtectedRoute>
             } />
           <Route path='/messenger-7000/*' element={<Navigate to='/messenger-7000/' />} />
+          <Route path='*' element={<Navigate to='/messenger-7000/' />} />
         </Route>
       </Routes>
     </BrowserRouter>
