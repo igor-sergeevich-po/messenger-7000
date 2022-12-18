@@ -125,7 +125,7 @@ export const Registration = () => {
                       </label>
                     <button className='sign-up'>Sign up</button>
                 </form>
-                <button  onClick={deleteAcc}>deleteAcc</button>
+                {/* <button  onClick={deleteAcc}>deleteAcc</button> */}
                 <p className='registration_question'>Do you have an account? <Link className='link' to='/messenger-7000/login'>yes, I have</Link> </p>
             </div>
         </div>

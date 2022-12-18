@@ -12,26 +12,21 @@ export const Input = () => {
   const uidMessage = uuid();
   let timeStamp = new Date().getTime();
   
-  console.log(currentUser.displayName);
   const handleClick= async(e) => {
-    e.preventDefault();
-    const userMessage = e.target.userMes.value;
+    let userMessage = document.querySelector('[name="userMes"]');
     await setDoc(doc(db, "messages", `${displayName+ `_`+ timeStamp}`), {
       uid,
       displayName,
       email,
       uidMessage,
-      message: userMessage
+      message: userMessage.value
     });
-    e.target.userMes.value = ''
+    userMessage.value = ''
   }
   return (
     <div className='inputChat'>
-      
-     <form onSubmit={handleClick}>
         <input type="inputText" name='userMes' placeholder='input your message' />
-        <button type='submit' className='send-button'>Send text</button>
-     </form>
+        <button onClick={handleClick} type='submit' className='send-button'>Send text</button>
     </div>
   )
 }
