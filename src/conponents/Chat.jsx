@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import settings from '../assets/img/chat/setting.png';
 import help from '../assets/img/chat/help.png';
 import research from '../assets/img/chat/research.png';
 import { Messages } from './Messages';
 import { Input } from './Input';
+import { ChatContext } from '../hoc/ChatContext';
+
 export const Chat = () => {
+  const {data} = useContext(ChatContext)
+  const somText =
+   data?.user?.displayName
+    ? <span style={{color: 'gray', fontStyle:'italic'}}>chat with : </span>
+    : ''
+  console.log(data)
   return (
     <div className='chat'>
       <div className="chatInfo">
-        <span>chat with: Lord</span>
+        <span>{somText}{data.user?.displayName}</span>
         <div className="chatIcons">
           <img src={help} alt="" />
           <img src={settings} alt="" />
