@@ -60,6 +60,8 @@ export const Search = () => {
         } catch (error) {
           
         }
+        setUser(null);
+        setUserName('')
   }
 
   const handleKey = (e) => {
@@ -67,7 +69,7 @@ export const Search = () => {
   }
   return (
     <div className='search'>
-        <input onChange={e=>setUserName(e.target.value)} onKeyDown={handleKey} type="search_text" placeholder='Find user ?'/>
+        <input value={userName} onChange={e=>setUserName(e.target.value)} onKeyDown={handleKey} type="search_text" placeholder='Find user ?'/>
        {err && <span>User not found !</span>}
        {user && <div className="search_user" onClick={handleSelect}>
             <img className='search_avatar' src={user.photoURL} alt="" />
