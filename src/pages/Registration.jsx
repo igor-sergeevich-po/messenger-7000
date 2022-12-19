@@ -14,7 +14,9 @@ export const Registration = () => {
   const imageRef = ref(storage, `avatars/user_${timeStamp}`);
 
   useEffect(() => {
-    uploadBytes(imageRef, image)
+    
+     if (image) {
+      uploadBytes(imageRef, image)
         .then(() => {
           getDownloadURL(imageRef)
             .then((url) => {
@@ -24,7 +26,8 @@ export const Registration = () => {
               console.log(err.message)
             })
         })
-        setUrl(url)
+     }
+
   }, [image])
 
   const deleteAcc = async () => {
