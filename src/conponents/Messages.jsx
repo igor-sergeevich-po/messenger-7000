@@ -1,48 +1,27 @@
+import { doc, onSnapshot } from 'firebase/firestore';
 import { listAll, ref } from 'firebase/storage';
-import React, { useEffect, useState } from 'react';
-import { storage } from '../firebase';
+import React, { useContext, useEffect, useState } from 'react';
+import { db, storage } from '../firebase';
+import { ChatContext } from '../hoc/ChatContext';
 import { Message } from './Message';
 
 
 export const Messages = () => {
-  const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState([]);
+  const {data} = useContext(ChatContext);
+ 
   useEffect(() => {
-    const listRef = ref(storage, 'messages');
+    const unSub = onSnapshot(doc(db, 'chats', data.chatId), (doc) => {
+      doc.exists() && setMessages(doc.data().messages);
+    })
+    return ()=>{
+      unSub();
+    }
+  }, [data.chatId])
 
-      // Find all the prefixes and items.
-      listAll(listRef)
-        .then((res) => {
-          res.prefixes.forEach((folderRef) => {
-           console.log('***',folderRef)
-          });
-          res.items.forEach((itemRef) => {
-            // All the items under listRef.
-          });
-        }).catch((error) => {
-          // Uh-oh, an error occurred!
-        });
-  }, [messages])
-  
   return (
     <div className='messages'>
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message /><Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message /><Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
+      {messages.map(m=> <Message key={m.id} message={m}/>)}
     </div>
   )
 }

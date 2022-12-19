@@ -7,11 +7,11 @@ import { Input } from './Input';
 import { ChatContext } from '../hoc/ChatContext';
 
 export const Chat = () => {
-  const {data} = useContext(ChatContext)
+  const {data} = useContext(ChatContext);
   const somText =
    data?.user?.displayName
     ? <span style={{color: 'gray', fontStyle:'italic'}}>chat with : </span>
-    : ''
+    : <span style={{color: '#48c9ff', fontStyle:'italic'}}>find chat with: Igor</span>
   console.log(data)
   return (
     <div className='chat'>
