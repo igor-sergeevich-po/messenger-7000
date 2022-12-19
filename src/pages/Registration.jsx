@@ -31,7 +31,10 @@ export const Registration = () => {
   }, [image])
 
   const deleteAcc = async () => {
-    // await deleteDoc(doc(db, 'users', 'ARw2kdVkGoYZKXJxF9GVhgy6z1R2'));
+    // await deleteDoc(doc(db, 'users', 'j0bW6C8kKINA894n0Ao2krdQ3iF2'));
+    // await deleteDoc(doc(db, 'chats', 'sVh5p6YNoEPaM8wfLXS1CkiY0bc2j0bW6C8kKINA894n0Ao2krdQ3iF2'));
+    // await deleteDoc(doc(db, 'userChats', 'j0bW6C8kKINA894n0Ao2krdQ3iF2'));
+   
     // await deleteDoc(doc(db, 'messages', 'gringo_ffa56d4d-3757-447b-b4ee-4c67fb0b6ca0'));
     // await deleteDoc(doc(db, 'userChats', 'faMhh5kmppPGXJXGCWfB3QkFoSq2'));
   }
@@ -62,7 +65,9 @@ export const Registration = () => {
       displayName,
       email,
       photoURL: url,  
-    })
+    });
+
+    await setDoc(doc(db, 'userChats', response.user.uid), {})
     navigate('/messenger-7000/home')
 
   }
@@ -84,7 +89,7 @@ export const Registration = () => {
                       </label>
                     <button className='sign-up'>Sign up</button>
                 </form>
-                {/* <button  onClick={deleteAcc}>deleteAcc</button> */}
+                <button  onClick={deleteAcc}>deleteAcc</button>
                 <p className='registration_question'>Do you have an account? <Link className='link' to='/messenger-7000/login'>yes, I have</Link> </p>
             </div>
         </div>
