@@ -14,7 +14,6 @@ import { AuthContext } from './hoc/AuthContext';
 
 function App() {
   const {currentUser} = useContext(AuthContext);
-  console.log(currentUser)
 
   const ProtectedRoute = ({children}) => {
     if (!currentUser) {

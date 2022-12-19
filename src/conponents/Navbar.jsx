@@ -11,10 +11,6 @@ import { AuthContext } from '../hoc/AuthContext';
 
 export const Navbar = () => {
   const {currentUser} = useContext(AuthContext)
-  console.log(currentUser)
-  console.log(currentUser.photoURL)
-
-
 
 
   const navigate = useNavigate();
@@ -23,7 +19,6 @@ export const Navbar = () => {
     signOut(auth)
       .then(() => {
         // Sign-out successful.
-        console.log('user out!')
         navigate('/messenger-7000/login')
       })
       .catch((error) => {
@@ -35,8 +30,7 @@ export const Navbar = () => {
     <div className='navbar'>
         <span className="navbar_logo-title">M 7000</span>
         <div className="navbar_user">
-            <img className='navbar_user-avatar' src={currentUser?.photoURL} alt="" />
-            {/* <img className='navbar_user-avatar' src={currentUser?.photoURL ? currentUser.photoURL : avatar} alt="" /> */}
+            <img className='navbar_user-avatar' src={currentUser?.photoURL ? currentUser.photoURL : avatar} alt="" />
             <span className="navbar_user-name">{currentUser?.displayName ? currentUser?.displayName: 'user'}</span>
             <button onClick={userLogOut} className="navbar_logout">logout</button>
         </div>
