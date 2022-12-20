@@ -20,6 +20,29 @@
             height: 20px;
             cursor: pointer;
         }
+        .chatIcons {
+            display: flex;
+            gap: 5px;
+            span {
+                display: flex;
+                padding: 2px 7px;
+                // justify-content:flex-end;
+                // text-align: center;
+                cursor: pointer;
+                border: 2px solid $headerSidebarLight;
+                color:$headerSidebarLight;
+                border-radius: 10px;
+                transition: 0.3s;
+                &:hover {
+                    color: $headerTitleLight;
+                    border: 2px solid $headerTitleLight;
+                }
+                &:active {
+                    color: $activeColorElementLight;
+                    border: 2px solid $activeColorElementLight;
+                }
+            }
+        }
     }
     .messages {
         height: 80%;

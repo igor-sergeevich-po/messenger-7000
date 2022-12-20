@@ -1,0 +1,23 @@
+.popup {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(1,1,1, .5);
+    backdrop-filter: blur(10px);
+        .popup_content {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $userChatBgLight;
+            // padding: 133px;
+            margin: auto;
+            border-radius: 10px;
+        }
+    }
+    
+    .popup-active {
+      display: none;
+    }
