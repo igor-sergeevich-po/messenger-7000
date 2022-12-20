@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { AuthContext } from '../hoc/AuthContext';
 import { v4 as uuid } from 'uuid';
-import { arrayUnion, doc, serverTimestamp, setDoc, Timestamp, updateDoc } from 'firebase/firestore';
+import { arrayUnion, doc, serverTimestamp, Timestamp, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 import { ChatContext } from '../hoc/ChatContext';
 
@@ -9,7 +9,13 @@ export const Input = () => {
   const {currentUser} = useContext(AuthContext);
   const {data} = useContext(ChatContext);
   
-  const handleClick= async(e) => {
+  const handleClickEnter = (e) => {
+    if (e.code === 'Enter') {
+      handleClick()
+    }
+  }
+
+  const handleClick = async(e) => {
     let userMessage = document.querySelector('[name="userMes"]');
     
     if(userMessage.value && data?.user?.uid) {
@@ -45,7 +51,7 @@ export const Input = () => {
   
   return (
     <div className='inputChat'>
-        <input type="inputText" name='userMes' placeholder='input your message' />
+        <input onKeyDown={handleClickEnter} type="inputText" name='userMes' placeholder='input your message' />
         <button onClick={handleClick} type='submit' className='send-button'>Send text</button>
     </div>
   )
