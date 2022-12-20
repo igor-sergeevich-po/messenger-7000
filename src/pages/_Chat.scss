@@ -78,6 +78,17 @@
                     }
                 }
             }
+            &.false {
+                    .message-info {
+                        flex-direction: row-reverse;                      
+                        .message-text {
+                            p {
+                                border-radius: 10px 0px 10px 10px;
+                            }
+                        }
+                    }
+    
+               }
         }
     }
     .inputChat {

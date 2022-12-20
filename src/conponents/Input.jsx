@@ -6,22 +6,13 @@ import { db } from '../firebase';
 import { ChatContext } from '../hoc/ChatContext';
 
 export const Input = () => {
-  const [text, setText] = useState('');
-  const [img, setImg] = useState(null);
-
   const {currentUser} = useContext(AuthContext);
   const {data} = useContext(ChatContext);
-
-  const uid = currentUser.uid;
-  const email = currentUser.email;
-  const displayName = currentUser.displayName;
-  const uidMessage = uuid();
-  let timeStamp = new Date().getTime();
   
   const handleClick= async(e) => {
     let userMessage = document.querySelector('[name="userMes"]');
     
-    if(userMessage.value) {
+    if(userMessage.value && data?.user?.uid) {
       await updateDoc(doc(db, "chats", data.chatId), {
         messages: arrayUnion({
           id: uuid(),
@@ -44,21 +35,14 @@ export const Input = () => {
         [data.chatId+".date"]: serverTimestamp(),
       });
       userMessage.value = ''
+    } else if (!data?.user?.uid) {
+      alert('choose a partner to get started')
+    } else if (!userMessage.value) {
+      alert('give me message please')
     }
 
   }
   
-  // const handleClick= async(e) => {
-  //   let userMessage = document.querySelector('[name="userMes"]');
-  //   await setDoc(doc(db, "messages", `${displayName+ `_`+ timeStamp}`), {
-  //     uid,
-  //     displayName,
-  //     email,
-  //     uidMessage,
-  //     message: userMessage.value
-  //   });
-  //   userMessage.value = ''
-  // }
   return (
     <div className='inputChat'>
         <input type="inputText" name='userMes' placeholder='input your message' />

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {v4 as uuid} from 'uuid';
 
 export const Popup = ({popupIsActive, setPopupIsActive}) => {
     const handleClosePopup = () => {
@@ -15,7 +16,7 @@ export const Popup = ({popupIsActive, setPopupIsActive}) => {
 <p>when creating, these technologies and libraries were studied:</p>
 
 <ol>
-  {tehnology.map((key) => <li>{key}</li>)}
+  {tehnology.map((key) => <li key={uuid()}>{key}</li>)}
 </ol>
 
 the purpose of this project is to consolidate skills in the use of basic technologies</article>
