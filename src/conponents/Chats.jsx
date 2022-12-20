@@ -39,7 +39,7 @@ export const Chats = () => {
                         </div>
                         <div className="userChat-info">
                               <span className="user-chat-name">{chat[1].userInfo.displayName}</span>
-                              <p className='last-mess'>{chat[1].userInfo.lastMessage?.text}</p>
+                              <p className='last-mess'>{chat[1].lastMessage?.text}</p>
                         </div>
                  </div>
       ))}

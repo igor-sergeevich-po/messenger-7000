@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { AuthContext } from '../hoc/AuthContext';
 import { v4 as uuid } from 'uuid';
-import { arrayUnion, doc, setDoc, Timestamp, updateDoc } from 'firebase/firestore';
+import { arrayUnion, doc, serverTimestamp, setDoc, Timestamp, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 import { ChatContext } from '../hoc/ChatContext';
 
@@ -28,6 +28,20 @@ export const Input = () => {
         date: Timestamp.now(),
       })
     });
+
+    await updateDoc(doc(db, 'userChats', currentUser.uid), {
+      [data.chatId + ".lastMessage"]: {
+        text: userMessage.value,
+      },
+      [data.chatId+".date"]: serverTimestamp(),
+    });
+    await updateDoc(doc(db, 'userChats', data.user.uid), {
+      [data.chatId + ".lastMessage"]: {
+        text: userMessage.value,
+      },
+      [data.chatId+".date"]: serverTimestamp(),
+    });
+
     userMessage.value = ''
   }
   
