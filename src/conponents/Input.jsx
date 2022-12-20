@@ -20,27 +20,30 @@ export const Input = () => {
   
   const handleClick= async(e) => {
     let userMessage = document.querySelector('[name="userMes"]');
-    await updateDoc(doc(db, "chats", data.chatId), {
-      messages: arrayUnion({
-        id: uuid(),
-        text: userMessage.value,
-        senderId: currentUser.uid,
-        date: Timestamp.now(),
-      })
-    });
-
-    await updateDoc(doc(db, 'userChats', currentUser.uid), {
-      [data.chatId + ".lastMessage"]: {
-        text: userMessage.value,
-      },
-      [data.chatId+".date"]: serverTimestamp(),
-    });
-    await updateDoc(doc(db, 'userChats', data.user.uid), {
-      [data.chatId + ".lastMessage"]: {
-        text: userMessage.value,
-      },
-      [data.chatId+".date"]: serverTimestamp(),
-    });
+    
+    if(userMessage.value) {
+      await updateDoc(doc(db, "chats", data.chatId), {
+        messages: arrayUnion({
+          id: uuid(),
+          text: userMessage.value,
+          senderId: currentUser.uid,
+          date: Timestamp.now(),
+        })
+      });
+  
+      await updateDoc(doc(db, 'userChats', currentUser.uid), {
+        [data.chatId + ".lastMessage"]: {
+          text: userMessage.value,
+        },
+        [data.chatId+".date"]: serverTimestamp(),
+      });
+      await updateDoc(doc(db, 'userChats', data.user.uid), {
+        [data.chatId + ".lastMessage"]: {
+          text: userMessage.value,
+        },
+        [data.chatId+".date"]: serverTimestamp(),
+      });
+    }
 
     userMessage.value = ''
   }
