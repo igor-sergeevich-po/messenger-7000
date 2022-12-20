@@ -21,7 +21,6 @@ export const Chats = () => {
          };
          currentUser.uid && getChats();
       }, [currentUser.uid])
-      console.log(chats)
 
       const handleSelect = (u) => {
             dispatch({type:'CHANGE_USER', payload: u})

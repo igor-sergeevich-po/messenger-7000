@@ -43,9 +43,9 @@ export const Input = () => {
         },
         [data.chatId+".date"]: serverTimestamp(),
       });
+      userMessage.value = ''
     }
 
-    userMessage.value = ''
   }
   
   // const handleClick= async(e) => {

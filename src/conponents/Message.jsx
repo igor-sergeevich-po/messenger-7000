@@ -1,21 +1,23 @@
-import userEvent from '@testing-library/user-event';
-import React, { useContext } from 'react';
-import avatar from '../assets/Avatar-PNG-Image.png';
+import React, { useContext, useEffect, useRef } from 'react';
 import { AuthContext } from '../hoc/AuthContext';
 import { ChatContext } from '../hoc/ChatContext';
 
 export const Message = ({message}) => {
   const {currentUser} = useContext(AuthContext);
   const {data} = useContext(ChatContext);
-  console.log('message-&&&',message)
-  console.log('data-&&&',data)
-  console.log('***current user**', currentUser)
+  const dateInfoMessage = (message.date).toDate().toLocaleTimeString()
+  const ref = useRef()  
+
+  useEffect(() => {
+    ref.current?.scrollIntoView({behavior:'smooth'})
+  }, [message])
+
   return (
-    <div className='message'>
+    <div ref={ref} className={`message ${message.senderId === currentUser.uid && 'owner'}`}>
       <div className="message-info">
         <div className="message-title">
-          <img src={message.sendeId === currentUser.uid ?currentUser.photoUrl : data.user.photoUrl} alt='' />
-          <span>{currentUser.displayName}</span>
+          <img className='message-avatar' src={message.senderId === currentUser.uid ? currentUser.photoURL : data.user.photoURL} alt='' />
+          <span>{dateInfoMessage}</span>
         </div>
         <div className="message-text">
           <p>{message.text}</p>
