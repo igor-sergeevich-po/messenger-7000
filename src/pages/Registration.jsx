@@ -31,10 +31,15 @@ export const Registration = () => {
   }, [image])
 
   const deleteAcc = async () => {
-    // await deleteDoc(doc(db, 'users', 'BtWZUj3cXicjOYedYDezjlVDe7x2'));
+    // await deleteDoc(doc(db, 'users', '5E3bcXH0JphL7gqykaBmgnKj3Le2'));
+
     // await deleteDoc(doc(db, 'userChats', 'j0bW6C8kKINA894n0Ao2krdQ3iF2'));
     // await deleteDoc(doc(db, 'messages', 'gringo_1671467584458'));
-    // await deleteDoc(doc(db, 'userChats', 'BtWZUj3cXicjOYedYDezjlVDe7x2'));
+    // await deleteDoc(doc(db, 'userChats', '5E3bcXH0JphL7gqykaBmgnKj3Le2'));
+
+
+    // await deleteDoc(doc(db, 'chats', 'NdnHGUVBHuYg1rLTdoHPN6TNLBg25E3bcXH0JphL7gqykaBmgnKj3Le2'));
+
   }
 
   const setAvatar = async (e) => {

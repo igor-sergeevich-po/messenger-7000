@@ -4,11 +4,14 @@ import { v4 as uuid } from 'uuid';
 import { arrayUnion, doc, serverTimestamp, Timestamp, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 import { ChatContext } from '../hoc/ChatContext';
+import { Popup } from './Popup';
+import { PopupContext } from '../hoc/PopupContext';
 
 export const Input = () => {
   const {currentUser} = useContext(AuthContext);
   const {data} = useContext(ChatContext);
-  
+  const {setPopupIsActive, setPopupMessage} = useContext(PopupContext);
+
   const handleClickEnter = (e) => {
     if (e.code === 'Enter') {
       handleClick()
@@ -42,9 +45,13 @@ export const Input = () => {
       });
       userMessage.value = ''
     } else if (!data?.user?.uid) {
-      alert('choose a partner to get started')
+      // alert('choose a partner to get started')
+      setPopupMessage('choose a partner to get started')
+      setPopupIsActive(true)
     } else if (!userMessage.value) {
-      alert('give me message please')
+      // alert('give me message please')
+      setPopupMessage('give me message please')
+      setPopupIsActive(true)
     }
 
   }
