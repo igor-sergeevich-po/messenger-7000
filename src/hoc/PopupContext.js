@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-import { Popup } from "../conponents/Popup";
 
 export const PopupContext = createContext(null);
 

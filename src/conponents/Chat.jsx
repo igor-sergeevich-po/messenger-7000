@@ -22,7 +22,7 @@ export const Chat = () => {
         <div className="chatInfo">
           <span>{somText}{data.user?.displayName}</span>
           <div className="chatIcons">
-            <span onClick={popupActive}>0</span>
+            <span onClick={() => console.log('change theme')}>0</span>
             <span onClick={popupActive}>?</span>
           </div>
         </div>

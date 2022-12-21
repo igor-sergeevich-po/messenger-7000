@@ -12,9 +12,11 @@
             justify-content: center;
             align-items: center;
             background-color: $userChatBgLight;
-            // padding: 133px;
             margin: auto;
             border-radius: 10px;
+            article {
+                color: $headerTitleLight;
+            }
         }
     }
     

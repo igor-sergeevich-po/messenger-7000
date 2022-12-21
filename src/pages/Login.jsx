@@ -1,11 +1,14 @@
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../firebase';
+import { AuthContext } from '../hoc/AuthContext';
 
 export const Login = () => {
+  const {loaderIsActive, setLoaderIsActive} = useContext(AuthContext);
   const navigate = useNavigate();
   const logIn = (e) => {
+    setLoaderIsActive(true)
   
     e.preventDefault()
     const email = e.target.email.value
@@ -13,6 +16,8 @@ export const Login = () => {
   
     signInWithEmailAndPassword(auth, email, password)
     .then(resp => {
+      setLoaderIsActive(false)
+
       return navigate('/messenger-7000/home')
     })
     .catch((error) => {
@@ -22,8 +27,9 @@ export const Login = () => {
 
   return (
     <React.Fragment>
+         {loaderIsActive && <div className="loader"></div>}
         <div className="container">
-            <div className="wrapper">
+            {loaderIsActive? '' : <div className="wrapper">
                 <h2 className='app-title'>Messenger 7000</h2>
                 <span className='title'>Login</span>
                 <form onSubmit={logIn}>
@@ -35,7 +41,7 @@ export const Login = () => {
                 <p className='registration_question'>
                   You don't have an account? <Link className='link' to='/messenger-7000/'>
 yes i don't have</Link> </p>
-            </div>
+            </div>}
         </div>
     </React.Fragment>
   )

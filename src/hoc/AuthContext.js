@@ -6,6 +6,8 @@ export const AuthContext = createContext(null);
 
 export const AuthContextProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState({});
+    const [loaderIsActive, setLoaderIsActive] = useState(false);
+    const [themeDark, setThemeDark] = useState(false)
 
     useEffect(() => {
         const unsub = onAuthStateChanged(auth, (user) => {
@@ -15,7 +17,8 @@ export const AuthContextProvider = ({children}) => {
             unsub();
         }
     }, [])
-    return <AuthContext.Provider value={{currentUser}}>
+
+    return <AuthContext.Provider value={{currentUser, themeDark, setThemeDark, loaderIsActive, setLoaderIsActive}}>
         {children}
     </AuthContext.Provider>
 }
