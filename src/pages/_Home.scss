@@ -39,7 +39,7 @@
                 
                 .navbar_user-avatar {
                    display: block;
-                margin: auto;
+                    margin: auto;
                     height: 35px;
                     width: 35px;
                     object-fit: cover;
@@ -177,4 +177,103 @@
         }
     }
   
+}
+
+$small: 600px;
+$medium: 900px;
+@media screen and (min-width: $small) and (max-width: $medium) {
+    .home {
+        font-size: 12px;
+        width: 90%;
+        .sidebar {
+            .navbar {
+                height: 8%;
+                font-size: 16px;
+                padding: 8px;
+                .navbar_logo-title {
+                    font-size: 16px;
+                }
+                .navbar_user {
+                    gap: 10px;
+                    .navbar_user-avatar {
+                       display: block;
+                        margin: auto;
+                        height: 30px;
+                        width: 30px;
+                    }
+                    .navbar_logout {
+                        margin-left: auto;
+                        margin-right: auto;
+                        font-size: 10px;
+                    }
+                }
+            }
+            .search {
+                .search_user {
+                    gap: 10px;
+                    padding: 5px;
+                    .search_avatar {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+    
+            }
+    
+            .chats {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 5px;
+                .user {
+                    gap: 5px;
+                    padding: 5px 10px;
+                    .user-chat-avatar {
+                        width: 30px;
+                    }
+                    .userChat-info {
+                        .user-chat-name {
+                           
+                        }
+                    }
+                }
+            }
+        }
+            
+    }
+}
+
+$micro: 300px;
+$mini: 600px;
+@media screen and (min-width: $micro) and (max-width: $mini) {
+    .home {
+        font-size: 12px;
+        width: 90%;
+        .sidebar {
+            flex: 1;
+            .navbar {
+                height: 8%;
+                font-size: 12px;
+                padding: 4px;
+                .navbar_user{
+                    gap: 4px;
+                }
+                .navbar_logo-title {
+                    display: none;
+                
+                }
+            }
+            .search {
+                padding: 5px;
+                transition: .3s;
+                border-bottom: 2px solid rgb(76, 97, 163);
+                input {
+                    padding: 5px;
+                    &::placeholder {
+                        font-size: 8px;                       
+                    }
+                
+                }
+        }}
+    }
 }

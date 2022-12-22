@@ -1,4 +1,4 @@
-// for registration
+
 $titleAppLight: rgb(76, 97, 163);
 $bgColorLight: #053C5E;
 $bgColorAppLight: #dfe9f1dd;
@@ -22,3 +22,15 @@ $searchUserBgLight: #d9e7f3;
 $userChatBgLight: #93a4cb;
 
 $inputChatLight: #F8F8F8;
+
+// experiment
+$blackThemeBg: black;
+$blackThemeText: rgb(228, 8, 8);
+html[data-theme='light'] {
+    --color-text: #{$hoverColorShadowBattonLight};
+    --color-background: #{$headerTitleLight};
+}
+html[data-theme='dark'] {
+    --color-text: #{$blackThemeBg};
+    --color-background: #{$blackThemeText};
+}

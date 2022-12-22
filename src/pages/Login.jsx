@@ -17,10 +17,11 @@ export const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
     .then(resp => {
       setLoaderIsActive(false)
-
       return navigate('/messenger-7000/home')
     })
     .catch((error) => {
+      setLoaderIsActive(false)
+      navigate('/messenger-7000/login')
         alert(error)
     })
   }

@@ -26,8 +26,6 @@
             span {
                 display: flex;
                 padding: 2px 7px;
-                // justify-content:flex-end;
-                // text-align: center;
                 cursor: pointer;
                 border: 2px solid $headerSidebarLight;
                 color:$headerSidebarLight;
@@ -130,4 +128,93 @@
             }
         }
     }
+}
+
+$small: 600px;
+$medium: 900px;
+@media screen and (min-width: $small) and (max-width: $medium) {
+    .chat {
+        // flex: 2;
+        // display: flex;
+        // flex-direction: column;
+        // background: $userChatBgLight;
+        // height: 100%;
+        .chatInfo {
+            height: 8%;
+            font-size: 14px;
+            padding: 10px;
+        }
+        .messages {
+            height: 82%;
+        }
+        .inputChat {
+            height: 10%;
+            input {
+                width: 80%;
+                font-size: 12px;
+            }
+            .send-button {
+                width: 20%;
+            }
+        }
+    }
+    
+}
+
+$micro: 300px;
+$mini: 600px;
+@media screen and (min-width: $micro) and (max-width: $mini) { 
+    .chat {
+        .chatInfo {
+            height: 8%;
+            font-size: 10px;
+            padding: 5px;
+            .chatIcons {
+                padding: 2px;
+                img{
+                    height: 12px;
+                    width: 12px;
+                }
+            }
+        }
+        .messages {
+            height: 82%;
+            .message {
+                padding: 2px 7px;
+                
+                .message-info {
+                    gap: 5px;
+                    .message-title {
+                        img {
+                            width: 30px;
+                        }
+                        span {
+                            font-size: 8px;
+                        }
+                    }
+                    .message-avatar {
+                        border-radius: 10px;
+                    }
+                    .message-text {
+                        p {
+                            font-size: 10px;
+                            background-color: rgb(236 236 236);
+                            padding: 3px 6px;
+                            border-radius: 0 10px 10px 10px;
+                        }
+                    }}}
+        }
+
+        .inputChat {
+            height: 10%;
+            input {
+                width: 70%;
+                font-size: 10px;
+            }
+            .send-button {
+                width: 30%;
+            }
+        }
+    }
+    
 }

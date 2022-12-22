@@ -4,11 +4,15 @@ import { Input } from './Input';
 import { ChatContext } from '../hoc/ChatContext';
 import { Popup } from './Popup';
 import { PopupContext } from '../hoc/PopupContext';
+import lamp from '../assets/light-lamp.svg'
 
 export const Chat = () => {
   const {data} = useContext(ChatContext);
-  const {popupActive} = useContext(PopupContext);
-
+  const {popupActive, setPopupIsActive, setPopupMessage} = useContext(PopupContext);
+  const changeTheme = () => {
+    setPopupMessage('Soon you will be able to change the theme!')
+    setPopupIsActive(true)
+  }
   const somText =
    data?.user?.displayName
     ? <span style={{color: 'gray', fontStyle:'italic'}}>chat with : </span>
@@ -22,7 +26,7 @@ export const Chat = () => {
         <div className="chatInfo">
           <span>{somText}{data.user?.displayName}</span>
           <div className="chatIcons">
-            <span onClick={() => console.log('change theme')}>0</span>
+            <span onClick={changeTheme}><img src={lamp} alt=''></img></span>
             <span onClick={popupActive}>?</span>
           </div>
         </div>
