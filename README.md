@@ -1,4 +1,4 @@
-# messenger-7000
+<h1 align="center">messenger-7000</h1>
 
 <p align="center">
   <img src="https://cdn3.iconfinder.com/data/icons/multimedia-9/512/Multimedia_Mail_message-256.png" alt="Логотип приложения"/>
@@ -14,24 +14,37 @@
 
 ## Как использовать:
   * перейти по безопасной ссылке к приложению [messenger-7000](https://igor-sergeevich-po.github.io/messenger-7000/)
-  ![Скриншот 11 12 22_10 04 44](https://github.com/igor-sergeevich-po/messenger-7000/assets/93769681/05cfe326-c47f-4860-9516-f69d29d8d786)
+<p align="center">
+  <img src="https://github.com/igor-sergeevich-po/messenger-7000/assets/93769681/05cfe326-c47f-4860-9516-f69d29d8d786" />
+</p>
+
 ### Если вы опытный пользователь:
 * если у вас уже есть учетная запись:
   * перейти по ссылке Login внизу диалогового окна
-    ![Скриншот 11 12 22_10 04 44](https://github.com/igor-sergeevich-po/messenger-7000/assets/93769681/29bd31ea-d08e-4d3b-a1c2-41eca74b3c23)
+<p align="center">
+  <img src="https://github.com/igor-sergeevich-po/messenger-7000/assets/93769681/29bd31ea-d08e-4d3b-a1c2-41eca74b3c23" />
+</p>
+
   *  введите указанные данные при регистрации:<br>
-  ![Скриншот 11 12 22_10 04 54](https://github.com/igor-sergeevich-po/messenger-7000/assets/93769681/a4c08c6c-c22b-4c28-ab38-20d37b7fd877)
+<p align="center">
+  <img src="https://github.com/igor-sergeevich-po/messenger-7000/assets/93769681/a4c08c6c-c22b-4c28-ab38-20d37b7fd877" />
+</p>
+
 * можно приступать к диалогу.
   
 ### Если вы новый пользователь:
 * заполните все  поля и выберите аватарку(из предоставленных либо по своему усмотрению)
 * в диалоговом окне левой кнопкой мыши кликните по кнопке для регистрации => Sign up
-  ![Скриншот 11 12 22_10 04 44](https://github.com/igor-sergeevich-po/messenger-7000/assets/93769681/cc8c1acd-9e0c-4b3a-bd54-c82b2e3fce45)
+<p align="center">
+  <img src="https://github.com/igor-sergeevich-po/messenger-7000/assets/93769681/cc8c1acd-9e0c-4b3a-bd54-c82b2e3fce45" />
+</p>
 
 * для начала диалога установите фокус ввода с клавиатуры в поле для поиска собеседника (поле находится в левом верхнем углу приложения "Find user ? ")
 * введите точное имя собеседника и нажмите клавишу Enter
 * ниже поля для поиска появятся все возможные собеседники, кликните левой кнопкой мыши по необходимому собеседнику
-![Скриншот 07 01 23_21 51 58](https://github.com/igor-sergeevich-po/messenger-7000/assets/93769681/ff22bb10-1774-46cb-91dc-39a88dbf96c8)
+<p align="center">
+  <img src="https://github.com/igor-sergeevich-po/messenger-7000/assets/93769681/ff22bb10-1774-46cb-91dc-39a88dbf96c8" />
+</p>
 
 * для начала диалога напишите сообщение в поле ввода сообщений помеченном как "input your message"
 * после окончания ввода сообщения нажмите на клавиатуре клавишу "Enter", либо левой кнопкой мыши кликните по кнопке "Send text", расположенной правее поля для сообщений.
